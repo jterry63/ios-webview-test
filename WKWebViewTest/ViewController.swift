@@ -25,7 +25,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         print(surl)
         print("*************************************************")
 
-        if surl?.hasPrefix("atrium://") == true || surl?.hasPrefix("mx://") == true {
+        if surl?.hasPrefix("atrium://") == true || surl?.hasPrefix("myapp://") == true || surl?.hasPrefix("mx://") == true {
             // Take action here
             let urlc = URLComponents(string: surl ?? "")
             let path = urlc?.path ?? ""
@@ -73,7 +73,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "http://10.17.31.24:3000/md/connect/bytgtx5zcftA6nq4h0x1d0gjc2Zs9n7d7A9pmsx782k0Av6sAw0x35vfzhnjgvrv71b5lz41mzsvm86ydrr79ndzcv5my5b89pb7ztg2fm636hql6qbcr8d977k94g1xqm59zAmdl9b9714lb2jA17lg9f44lc2s4sl27w1dkfk7yg05Ap4xm54mz70lvyyc8j8sxjl17s2vv07cAc2768cjf54x5q6w7800A2Alhkrqtj1055xfmg6dvpzmyrh2vfcd7vttn0djqd515wc1cn5mbn06bvw5j5xjtzqqj4dtw5c78xt61st3lvf3lsvbA9yjhmgrrxm1094gAA5Af1cns53psrgqk4z5cs1c/eyJpc19tb2JpbGVfd2VidmlldyI6dHJ1ZSwidWlfbWVzc2FnZV92ZXJzaW9uIjo0fQ%3D%3D")!
+        let url = URL(string: "https://int-widgets.moneydesktop.com/md/connect/bh0yn2ncpwvgkszg2Avk4dw3AAZ5qkzk35xnk2A7jslts3qdhbvl6kr95m1mq339dkr0f9fsh3dny3fmjj8tz27sA7gzv5kcmtxqvmndy1x7lAh69hbgd3sj6b7z6516x481gd1n7Aqctvg19g5qbxjjz70fsctstAw83Amftd5twf9ltx34rklgsAd2ztxczwm3hpwqy56w6lg5yrb3wbhb96tptcr7pctwtmhckp5g8sc4wy45bzp2qrh3cvy45kyd4vs3cgswv871x3gkbyn5mknjxrmgzwyjyznm31f6bf1pynbtdvw9dp6kytxkm8ysyg2x7tl97fm5b9g68nty37nd5pb3rjAmzxlg/eyJpc19tb2JpbGVfd2VidmlldyI6dHJ1ZSwidWlfbWVzc2FnZV92ZXJzaW9uIjo0LCJ1aV9tZXNzYWdlX3dlYnZpZXdfdXJsX3NjaGVtZSI6Im15YXBwIn0%3D")!
         webView.customUserAgent = "ActiveRemote"
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
